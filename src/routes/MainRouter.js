@@ -41,6 +41,15 @@ class MainRouter {
   get = (path, ...callbacks) => {
     this.router.get(path, this.applyCallbacks(callbacks))
   }
+  post = (path, ...callbacks) => {
+    this.router.post(path, this.applyCallbacks(callbacks))
+  }
+  put = (path, ...callbacks) => {
+    this.router.put(path, this.applyCallbacks(callbacks))
+  }
+  delete = (path, ...callbacks) => {
+    this.router.delete(path, this.applyCallbacks(callbacks))
+  }
 }
 
 export default MainRouter

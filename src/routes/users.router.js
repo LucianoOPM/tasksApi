@@ -8,6 +8,10 @@ class UserRouter extends MainRouter {
 
   init() {
     this.get('/', userController.getUsers)
+    this.get('/:id', userController.getUserById)
+    this.post('/', userController.createUser)
+    this.put('/:id', userController.updateUser)
+    this.delete('/:id', userController.deleteUser)
   }
 }
 
